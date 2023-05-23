@@ -1,0 +1,88 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Beef Burger",
+            "itemPrice": 1.500,
+            "image": "img/beef-burger.png",
+            "options": null
+        },
+        {
+            "id": 2,
+            "name": "Sandwich",
+            "itemPrice": 0.250,
+            "image": "img/sandwich.png",
+            "options": null
+        },
+        {
+            "id": 3,
+            "name": "Sawarma",
+            "itemPrice": 2,
+            "image": "img/sawarma.png",
+            "options": null
+        },
+        {
+            "id": 4,
+            "name": "Croissant",
+            "itemPrice": 3.500,
+            "image": "img/croissant.png",
+            "options": null
+        },
+        {
+            "id": 5,
+            "name": "Cinnamon Roll",
+            "itemPrice": 0.750,
+            "image": "img/cinnamon-roll.png",
+            "options": null
+        },
+        {
+            "id": 6,
+            "name": "Choco Glaze Donut with Peanut",
+            "itemPrice": 2.250,
+            "image": "img/choco-glaze-donut-peanut.png",
+            "options": null
+        },
+        {
+            "id": 7,
+            "name": "Choco Glazed Donut",
+            "itemPrice": 3,
+            "image": "img/choco-glaze-donut.png",
+            "options": null
+        },
+        {
+            "id": 8,
+            "name": "Red Glazed Donut",
+            "itemPrice": 6,
+            "image": "img/red-glaze-donut.png",
+            "options": null
+        },
+        {
+            "id": 9,
+            "name": "Iced Coffee Latte",
+            "itemPrice": 1,
+            "image": "img/coffee-latte.png",
+            "options": null
+        },
+        {
+            "id": 10,
+            "name": "Iced Chocolate",
+            "itemPrice": 0.600,
+            "image": "img/ice-chocolate.png",
+            "options": null
+        },
+        {
+            "id": 11,
+            "name": "Iced Tea",
+            "itemPrice": 2.150,
+            "image": "img/ice-tea.png",
+            "options": null
+        },
+        {
+            "id": 12,
+            "name": "Iced Matcha Latte",
+            "itemPrice": 4,
+            "image": "img/matcha-latte.png",
+            "options": null
+        }
+    ]
+}
