@@ -29,9 +29,9 @@ export const newOrderSlice = createSlice({
             state.paid = action.payload.paid
             state.change = action.payload.paid - action.payload.cart.total
         },
-        clearOrder: (state) => {
-            state = initialState
-        },
+        // clearOrder: (state) => {
+        //     state = initialState
+        // },
     },
     extraReducers: {},
 });
