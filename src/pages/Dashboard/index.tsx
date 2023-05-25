@@ -7,6 +7,7 @@ import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
 import { loadProducts } from "src/services/loadItems";
 import { setProducts } from "src/store/products/productSlice";
 import { Product } from "src/models/product.model";
+import OrderModal from "src/components/Modal/OrderModal";
 
 function index() {
   const dispatch = useAppDispatch();
@@ -49,6 +50,7 @@ function index() {
       </div>
       <CartSummary />
       {/* <LoadItems/> */}
+      <OrderModal />
     </div>
   );
 }

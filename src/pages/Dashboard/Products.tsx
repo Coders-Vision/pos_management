@@ -1,6 +1,7 @@
 import { Product } from "src/models/product.model";
 import { addToCart } from "src/store/cart/cartSlice";
 import { useAppDispatch } from "src/store/utilHooks";
+import { currrencyFormatter } from "src/utils/formatters";
 import { playBeep } from "src/utils/playBeep";
 
 interface IProducts {
@@ -47,10 +48,11 @@ function Products({ products }: IProducts) {
             onClick={() => addItemToCart(product)}
             className="select-none cursor-pointer transition-shadow overflow-hidden rounded-2xl bg-white shadow hover:shadow-lg"
           >
+            {/* <div className="m-1">Add to Cart</div> */}
             <img src={`${product.image}`} alt={`${product.name}`} />
             <div className="flex pb-3 px-3 text-sm -mt-3">
               <p className="flex-grow truncate mr-1">{product.name}</p>
-              <p className="nowrap font-semibold">KWD {product.itemPrice}</p>
+              <p className="nowrap font-semibold">{currrencyFormatter(product.itemPrice)}</p>
             </div>
           </div>
         </div>

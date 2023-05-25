@@ -101,6 +101,7 @@ function CartSummary() {
           </button>
           <input
             type="text"
+            readOnly
             value={item.qty}
             className="bg-white rounded-lg text-center shadow focus:outline-none focus:shadow-lg text-sm"
           />
