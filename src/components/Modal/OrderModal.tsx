@@ -1,4 +1,4 @@
-import { ReactInstance, useRef } from "react";
+import { useRef } from "react";
 import { clearOrder } from "src/store/newOrder/newOrderSlice";
 import { saveOrder } from "src/store/orders/orderSlice";
 import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
