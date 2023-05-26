@@ -1,5 +1,5 @@
 import { Product } from "src/models/product.model";
-import { addToCart, cart } from "src/store/cart/cartSlice";
+import { addToCart} from "src/store/cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
 import { currrencyFormatter } from "src/utils/formatters";
 import { playBeep } from "src/utils/playBeep";
