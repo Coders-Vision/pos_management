@@ -1,13 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from "./cart/cartSlice";
 import productReducer from "./products/productSlice";
-import ordertReducer from "./orders/orderSlice"
+import ordertReducer from "./orders/orderSlice";
 import newOrdertReducer from "./newOrder/newOrderSlice";
 const store = configureStore({
   reducer: {
     product: productReducer,
     cart: cartReducer,
-    orders:ordertReducer,
+    orders: ordertReducer,
     newOrder: newOrdertReducer,
   },
   devTools: import.meta.env.DEV,

@@ -31,11 +31,13 @@ function OrderModal() {
         <h2 className="text-xl font-semibold">POS React</h2>
         <p>Order Summary</p>
       </div>
-      <div className="flex mt-4 text-xs">
+      <div className="flex flex-col mt-4 text-xs">
         <div className="flex-grow">
           Order No: <span>{newOrder.orderId}</span>
         </div>
-        <div x-text="receiptDate" />
+        <div>
+          Date: <span>{newOrder.date}</span>
+        </div>
       </div>
       <hr className="my-2" />
       <div>
