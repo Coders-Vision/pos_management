@@ -5,7 +5,7 @@ import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
 import { currrencyFormatter } from "src/utils/formatters";
 import ReactToPrint from "react-to-print";
 import { clearCart } from "src/store/cart/cartSlice";
-
+import { TbFileInvoice} from "react-icons/tb";
 function OrderModal() {
   const componentRef = useRef(null);
   const dispatch = useAppDispatch();
@@ -22,12 +22,8 @@ function OrderModal() {
       ref={componentRef}
       className="text-left w-full text-sm p-6 overflow-auto"
     >
-      <div className="text-center">
-        <img
-          src="img/receipt-logo.png"
-          alt="React POS"
-          className="mb-3 w-8 h-8 inline-block"
-        />
+      <div className="flex flex-col items-center">
+        <TbFileInvoice className="mb-3 w-8 h-8 " />
         <h2 className="text-xl font-semibold">POS React</h2>
         <p>Order Summary</p>
       </div>
