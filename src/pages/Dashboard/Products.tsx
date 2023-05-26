@@ -1,5 +1,6 @@
+import Badge from "src/components/Badge";
 import { Product } from "src/models/product.model";
-import { addToCart} from "src/store/cart/cartSlice";
+import { addToCart } from "src/store/cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
 import { currrencyFormatter } from "src/utils/formatters";
 import { playBeep } from "src/utils/playBeep";
@@ -81,9 +82,9 @@ function Products({ products, productSearch }: IProducts) {
             className="relative select-none cursor-pointer transition-shadow overflow-hidden rounded-2xl bg-white shadow hover:shadow-lg"
           >
             {findItem(product.id) ? (
-              <div className="w-auto absolute top-2 right-3 bg-cyan-500 text-white rounded-md  py-1 text-center text-xs px-2">
+              <Badge color={"bg-cyan-500"} extra="absolute top-2 right-3">
                 In Cart
-              </div>
+              </Badge>
             ) : (
               <></>
             )}
