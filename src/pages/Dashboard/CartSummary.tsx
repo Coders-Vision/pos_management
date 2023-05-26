@@ -82,7 +82,7 @@ function CartSummary() {
                 ? removeItemFromCart(item.id)
                 : removeQtyFromItem(item.id)
             }
-            className="rounded-lg text-center py-1 text-white bg-blue-gray-600 hover:bg-blue-gray-700 focus:outline-none"
+            className="rounded-lg text-center py-1 text-white bg-[#F05C79] hover:bg-[#EC3257] focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ function CartSummary() {
           />
           <button
             onClick={() => addQtyToItem(item.id)}
-            className="rounded-lg text-center py-1 text-white bg-blue-gray-600 hover:bg-blue-gray-700 focus:outline-none"
+            className="rounded-lg text-center py-1 text-white bg-[#94C973] hover:bg-[#76B947] focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -231,6 +231,7 @@ function CartSummary() {
               {cash.map((amt, index) => (
                 <button
                   key={`${amt.label}-${index}`}
+                  disabled={cart.items.length > 0 ? false : true}
                   onClick={() => addCash(amt.value)}
                   className="bg-white rounded-lg shadow hover:shadow-lg focus:outline-none inline-block px-2 py-1 text-sm"
                 >

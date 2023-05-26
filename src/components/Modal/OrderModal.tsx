@@ -20,13 +20,12 @@ function OrderModal() {
   const Invoice = () => (
     <div
       ref={componentRef}
-      id="receipt-content"
       className="text-left w-full text-sm p-6 overflow-auto"
     >
       <div className="text-center">
         <img
           src="img/receipt-logo.png"
-          alt="Tailwind POS"
+          alt="React POS"
           className="mb-3 w-8 h-8 inline-block"
         />
         <h2 className="text-xl font-semibold">POS React</h2>
@@ -34,7 +33,7 @@ function OrderModal() {
       </div>
       <div className="flex mt-4 text-xs">
         <div className="flex-grow">
-          No: <span>{newOrder.orderId}</span>
+          Order No: <span>{newOrder.orderId}</span>
         </div>
         <div x-text="receiptDate" />
       </div>
@@ -122,6 +121,7 @@ function OrderModal() {
                   </button>
                 )}
                 onAfterPrint={() => confirmOrder()}
+                documentTitle={newOrder.orderId}
                 content={() => componentRef.current}
               />
             </div>

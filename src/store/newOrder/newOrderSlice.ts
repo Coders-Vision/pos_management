@@ -23,10 +23,13 @@ export const newOrderSlice = createSlice({
   initialState,
   reducers: {
     createOrder: (state, action: PayloadAction<NewOrderPayload>) => {
-      const currentTime = new Date().toISOString();
+      const date = new Date();
+      const dateFormat = date.toLocaleString();
+      const dateEpoch = date.getTime().toString();
+
       state.cart = action.payload.cart;
-      state.orderId = `REACT-POS-${currentTime}`;
-      state.date = currentTime;
+      state.orderId = `REACT-POS-${dateEpoch}`;
+      state.date = dateFormat;
       state.paid = action.payload.paid;
       state.change = numberFormat(
         action.payload.paid - action.payload.cart.total

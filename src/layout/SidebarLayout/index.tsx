@@ -101,7 +101,7 @@ function index() {
             </li>
           </ul>
           <a
-            href="https://github.com/emsifa/tailwind-pos"
+            href="https://github.com/Coders-Vision/pos_management"
             target="_blank"
             className="mt-auto flex items-center justify-center text-cyan-200 hover:text-cyan-100 h-10 w-10 focus:outline-none"
           >
