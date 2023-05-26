@@ -241,7 +241,7 @@ function CartSummary() {
             </div>
           </div>
 
-          {change > 0 && (
+          {change > 0 && cartItems.length > 0 && (
             <div className="flex mb-3 text-lg font-semibold bg-cyan-50 text-blue-gray-700 rounded-lg py-2 px-3">
               <div className="text-cyan-800">CHANGE</div>
               <div className="text-right flex-grow text-cyan-600">
@@ -276,18 +276,21 @@ function CartSummary() {
               </svg>
             </div>
           )}
-
-          <button
-            className={`text-white rounded-2xl text-lg w-full py-3 focus:outline-none ${
-              isSubmittable()
-                ? "bg-cyan-500 hover:bg-cyan-600"
-                : "bg-blue-gray-200"
-            }`}
-            disabled={!isSubmittable()}
-            onClick={() => OnCreateOrder()}
-          >
-            SUBMIT
-          </button>
+          {cartItems.length > 0 ? (
+            <button
+              className={`text-white rounded-2xl text-lg w-full py-3 focus:outline-none ${
+                isSubmittable()
+                  ? "bg-cyan-500 hover:bg-cyan-600"
+                  : "bg-blue-gray-200"
+              }`}
+              disabled={!isSubmittable()}
+              onClick={() => OnCreateOrder()}
+            >
+              SUBMIT
+            </button>
+          ) : (
+            <></>
+          )}
         </div>
         {/* end of payment info */}
       </div>
