@@ -1,12 +1,27 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import tsconfigPaths from "vite-tsconfig-paths";
+import path from "path"; // imported from @types/node package
 
 // https://vitejs.dev/config/
 export default defineConfig({
   // Tauri Configs
   // prevent vite from obscuring rust errors
   clearScreen: false,
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+      "@assets": path.resolve(__dirname, "./src/assets"),
+      "@components": path.resolve(__dirname, "./src/components"),
+      "@page": path.resolve(__dirname, "./src/pages"),
+      "@utils": path.resolve(__dirname, "./src/utils"),
+      "@models": path.resolve(__dirname, "./src/models"),
+      "@services": path.resolve(__dirname, "./src/services"),
+      "@layout": path.resolve(__dirname, "./src/layout"),
+      "@routes": path.resolve(__dirname, "./src/route"),
+      "@hooks": path.resolve(__dirname, "./src/hooks"),
+      "@store": path.resolve(__dirname, "./src/store"),
+    },
+  },
   server: {
     port: 3000,
     cors: true,
@@ -34,5 +49,5 @@ export default defineConfig({
     // produce sourcemaps for debug builds
     sourcemap: !!process.env.TAURI_DEBUG,
   },
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react()],
 });

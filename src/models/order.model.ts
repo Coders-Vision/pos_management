@@ -1,4 +1,4 @@
-import { Cart } from "./cart.model";
+import { Cart } from "@models/cart.model";
 
 export interface Order {
   orderId: string;

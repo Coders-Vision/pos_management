@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from "../store";
-import { Order } from "src/models/order.model";
-import { Cart } from "src/models/cart.model";
-import { numberFormat } from "src/utils/formatters";
+import { RootState } from "@store/store";
+import { Order } from "@models/order.model";
+import { Cart } from "@models/cart.model";
+import { numberFormat } from "@utils/formatters";
 
 type NewOrderPayload = {
   cart: Cart;

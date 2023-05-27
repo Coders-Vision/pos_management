@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
+import { useAppDispatch, useAppSelector } from "@store/utilHooks";
 import {
   addQty,
   removeQty,
   clearCart,
   removeItem,
-} from "src/store/cart/cartSlice";
-import { createOrder } from "src/store/newOrder/newOrderSlice";
-import { playBeep } from "src/utils/playBeep";
-import { currrencyFormatter } from "src/utils/formatters";
+} from "@store/cart/cartSlice";
+import { createOrder } from "@store/newOrder/newOrderSlice";
+import { playBeep } from "@utils/playBeep";
+import { currrencyFormatter } from "@utils/formatters";
 
 function CartSummary() {
   const [cashValue, setCashValue] = useState(0);

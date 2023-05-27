@@ -1,10 +1,10 @@
 import { useRef } from "react";
-import { clearOrder } from "src/store/newOrder/newOrderSlice";
-import { saveOrder } from "src/store/orders/orderSlice";
-import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
-import { currrencyFormatter } from "src/utils/formatters";
+import { clearOrder } from "@store/newOrder/newOrderSlice";
+import { saveOrder } from "@store/orders/orderSlice";
+import { useAppDispatch, useAppSelector } from "@store/utilHooks";
+import { currrencyFormatter } from "@utils/formatters";
 import ReactToPrint from "react-to-print";
-import { clearCart } from "src/store/cart/cartSlice";
+import { clearCart } from "@store/cart/cartSlice";
 import { TbFileInvoice} from "react-icons/tb";
 function OrderModal() {
   const componentRef = useRef(null);
