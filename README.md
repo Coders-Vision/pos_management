@@ -10,11 +10,18 @@ The first step is to install Rust and system dependencies. Keep in mind that thi
 
 ### For Windows
 
+#### Windows Build Tools
+You will need to install Microsoft Visual Studio C++ build tools. The easiest way is to install Build Tools for Visual Studio 2022. When asked which workloads to install, ensure "C++ build tools".
+
 ```powershell
+#Install Rust for Windows
 winget install --id Rustlang.Rustup
 ```
 
 ### For MacOS
+
+#### X Code Build Tools
+You will need to download and install Mac os Developement Tools
 
 ```bash
 #CLang and macOS Development Dependencies
