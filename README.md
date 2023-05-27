@@ -1,4 +1,4 @@
-# POS Management System (React TS + RTK + Tailwind CSS)
+# POS Management System (Tauri + React TS + RTK + Tailwind CSS)
 
 ## Description
 
