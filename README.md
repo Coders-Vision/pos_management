@@ -37,7 +37,7 @@ brew install rust
 $ pnpm install
 ```
 
-## Running the app
+## Running and Building the Vite App
 
 ```bash
 # development
@@ -48,4 +48,14 @@ $ pnpm build
 
 # preview build
 $ pnpm preview
+```
+
+## Running and Building the Tauri App
+
+```bash
+# development
+$ pnpm tauri dev
+
+# build production
+$ pnpm tauri build
 ```
