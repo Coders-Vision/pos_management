@@ -1,8 +1,8 @@
 import { LazyExoticComponent, Suspense, lazy } from "react";
 import { RouteObject } from "react-router-dom";
-import SuspenseLoader from "src/components/Loader/SuspenseLoader";
+import SuspenseLoader from "@components/Loader/SuspenseLoader";
 // import BaseLayout from 'src/layouts/BaseLayout';
-import SidebarLayout from "src/layout/SidebarLayout";
+import SidebarLayout from "@layout/SidebarLayout";
 
 const Loader = (Components: LazyExoticComponent<any>) => (props: any) =>
   (
@@ -14,9 +14,9 @@ const Loader = (Components: LazyExoticComponent<any>) => (props: any) =>
 // Pages
 
 // Dashboards
-const Dashboard = Loader(lazy(() => import("src/pages/Dashboard")));
+const Dashboard = Loader(lazy(() => import("@/pages/Dashboard")));
 // Orders
-const Orders = Loader(lazy(() => import("src/pages/Orders")));
+const Orders = Loader(lazy(() => import("@/pages/Orders")));
 
 // Status
 // const Status404 = Loader(

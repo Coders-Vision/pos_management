@@ -3,11 +3,11 @@ import SearchBar from "./SearchBar";
 import Products from "./Products";
 import CartSummary from "./CartSummary";
 // import LoadItems from 'src/components/Modal/LoadItems'
-import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
-import { loadProducts } from "src/services/loadItems";
-import { setProducts } from "src/store/products/productSlice";
-import { Product } from "src/models/product.model";
-import OrderModal from "src/components/Modal/OrderModal";
+import { useAppDispatch, useAppSelector } from "@store/utilHooks";
+import { loadProducts } from "@services/loadItems";
+import { setProducts } from "@store/products/productSlice";
+import { Product } from "@models/product.model";
+import OrderModal from "@components/Modal/OrderModal";
 
 function index() {
   const dispatch = useAppDispatch();
@@ -17,7 +17,6 @@ function index() {
 
   const fetchProducts = async () => {
     const items = await loadProducts();
-    console.log(items.products);
     dispatch(setProducts(items.products));
   };
   useEffect(() => {

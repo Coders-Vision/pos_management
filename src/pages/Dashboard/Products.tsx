@@ -1,9 +1,9 @@
-import Badge from "src/components/Badge";
-import { Product } from "src/models/product.model";
-import { addToCart } from "src/store/cart/cartSlice";
-import { useAppDispatch, useAppSelector } from "src/store/utilHooks";
-import { currrencyFormatter } from "src/utils/formatters";
-import { playBeep } from "src/utils/playBeep";
+import Badge from "@components/Badge";
+import { Product } from "@models/product.model";
+import { addToCart } from "@store/cart/cartSlice";
+import { useAppDispatch, useAppSelector } from "@store/utilHooks";
+import { currrencyFormatter } from "@utils/formatters";
+import { playBeep } from "@utils/playBeep";
 
 interface IProducts {
   products: Product[];

@@ -1,4 +1,4 @@
-import { Product } from "./product.model"
+import { Product } from "@models/product.model"
 
 export type Item = Product & { price: number, qty: number }
 export interface Cart {

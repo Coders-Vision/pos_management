@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
-import { Order, Orders } from "src/models/order.model";
+import { Order, Orders } from "@models/order.model";
 
 const initialState: Orders = {
   orders: [],
