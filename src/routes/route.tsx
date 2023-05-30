@@ -3,6 +3,7 @@ import { RouteObject } from "react-router-dom";
 import SuspenseLoader from "@components/Loader/SuspenseLoader";
 // import BaseLayout from 'src/layouts/BaseLayout';
 import SidebarLayout from "@layout/SidebarLayout";
+import BaseLayout from "@layout/BaseLayout";
 
 const Loader = (Components: LazyExoticComponent<any>) => (props: any) =>
   (
@@ -19,9 +20,7 @@ const Dashboard = Loader(lazy(() => import("@/pages/Dashboard")));
 const Orders = Loader(lazy(() => import("@/pages/Orders")));
 
 // Status
-// const Status404 = Loader(
-//   lazy(() => import('src/content/pages/Status/Status404'))
-// );
+const Status404 = Loader(lazy(() => import("@/pages/Status/Status404")));
 
 export const routes: RouteObject[] = [
   {
@@ -40,6 +39,16 @@ export const routes: RouteObject[] = [
       //     path: '*',
       //     element: <Status404 />
       // }
+    ],
+  },
+  {
+    path: "",
+    element: <BaseLayout />,
+    children: [
+      {
+        path: "*",
+        element: <Status404 />,
+      },
     ],
   },
 ];

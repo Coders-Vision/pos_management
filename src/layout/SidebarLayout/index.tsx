@@ -1,10 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
-import {
-  HiCalculator,
-  HiClipboardList,
-  HiCollection,
-} from "react-icons/hi";
+import { HiCalculator, HiClipboardList, HiCollection } from "react-icons/hi";
 import { AiTwotoneHome } from "react-icons/ai";
 function index() {
   return (
@@ -93,7 +89,10 @@ function index() {
           </a>
         </div>
       </div>
-      <Outlet />
+
+      <div className="flex-grow flex items-center justify-center ">
+        <Outlet />
+      </div>
     </div>
   );
 }
