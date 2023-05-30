@@ -42,7 +42,7 @@ function index() {
   }, [searchVal]);
 
   return (
-    <div className="flex-grow flex">
+    <>
       <div className="flex flex-col bg-blue-gray-50 h-full w-full py-4">
         <SearchBar searchVal={searchVal} setSearch={setSearchVal} />
         <Products products={searchProducts} productSearch={searchVal} />
@@ -50,7 +50,7 @@ function index() {
       <CartSummary />
       {/* <LoadItems/> */}
       <OrderModal />
-    </div>
+    </>
   );
 }
 
